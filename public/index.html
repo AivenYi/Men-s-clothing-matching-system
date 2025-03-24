@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>男性服装搭配系统</title>
+    <link rel="stylesheet" href="styles.css">  <!-- 修改路径 -->
+</head>
+<body>
+    <div class="container">
+        <header class="glass-effect">
+            <h1>男性服装搭配助手</h1>
+        </header>
+
+        <main>
+            <section id="user-profile" class="glass-effect">
+                <h2>个人信息</h2>
+                <div class="age-selector">
+                    <h3>选择年龄区间</h3>
+                    <div class="age-options">
+                        <button data-age="15-22">学生群体 (15-22岁)</button>
+                        <button data-age="22-28">职场新人 (22-28岁)</button>
+                        <button data-age="28-40">成熟男性 (28-40岁)</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="scene-selector" class="glass-effect">
+                <h2>场景选择</h2>
+                <div class="scene-cards">
+                    <div class="scene-card" data-scene="daily">
+                        <h3>日常穿搭</h3>
+                        <p>适合日常通勤、休闲场合</p>
+                    </div>
+                    <div class="scene-card" data-scene="sports">
+                        <h3>运动风格</h3>
+                        <p>适合运动、户外活动</p>
+                    </div>
+                    <div class="scene-card" data-scene="business">
+                        <h3>商务正装</h3>
+                        <p>适合职场、正式场合</p>
+                    </div>
+                    <div class="scene-card" data-scene="date">
+                        <h3>约会装扮</h3>
+                        <p>适合约会、社交场合</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="price-range" class="glass-effect">
+                <h2>价格范围</h2>
+                <div class="price-slider">
+                    <input type="range" min="100" max="5000" step="100" value="1000" id="price-input">
+                    <span id="price-value">￥1000</span>
+                </div>
+            </section>
+
+            <section id="outfit-recommendations" class="glass-effect">
+                <h2>搭配推荐</h2>
+                <div class="outfit-grid">
+                    <!-- 搭配推荐将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <section id="favorites" class="glass-effect">
+                <h2>我的收藏</h2>
+                <div class="favorites-grid">
+                    <!-- 收藏夹内容将通过JavaScript动态生成 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section id="ai-interaction" class="glass-effect">
+        <h2>AI 互动</h2>
+        <div class="interaction-container glass-effect">
+            <div class="upload-area">
+                <h3>上传图片</h3>
+                <input type="file" accept="image/*">
+            </div>
+            <div class="text-display">
+                <h3>AI 输出</h3>
+                <div class="text-output" id="text-output">
+                    <!-- AI 输出的文字将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./app.js"></script>  <!-- 修改路径 -->
+</body>
+</html>

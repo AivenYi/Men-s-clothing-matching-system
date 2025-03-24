@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服装搭配管理系统</title>
+    <link rel="stylesheet" href="/admin/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar glass-effect">
+            <h2>管理菜单</h2>
+            <ul>
+                <li><a href="/admin/outfits">服装管理</a></li>
+                <li><a href="/admin/categories">分类管理</a></li>
+                <li><a href="/admin/settings">系统设置</a></li>
+            </ul>
+        </nav>
+        <main class="content glass-effect">
+            <h1>服装搭配管理</h1>
+            <div class="outfit-form">
+                <h2>添加新搭配</h2>
+                <form action="/admin/outfits/add" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">搭配标题</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="scene">场景</label>
+                        <select id="scene" name="scene" required>
+                            <option value="daily">日常穿搭</option>
+                            <option value="sports">运动风格</option>
+                            <option value="business">商务正装</option>
+                            <option value="date">约会装扮</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age_range">年龄段</label>
+                        <select id="age_range" name="age_range" required>
+                            <option value="15-22">学生群体 (15-22岁)</option>
+                            <option value="22-28">职场新人 (22-28岁)</option>
+                            <option value="28-40">成熟男性 (28-40岁)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">价格</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">搭配图片</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <button type="submit">添加搭配</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
